@@ -12,7 +12,6 @@ export default function Document() {
 				{stylesElement}
 			</head>
 			<body>
-				<noscript>You need to enable JavaScript to run this app.</noscript>
 				<App />
 				<script src='/static/js/main.js'></script>
 			</body>
