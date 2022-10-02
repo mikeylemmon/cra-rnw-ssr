@@ -4,4 +4,4 @@ register({
 	ignore: [/(node_modules)/],
 	presets: ['@babel/preset-react'],
 })
-import('./index')
+import('./entry.server')
