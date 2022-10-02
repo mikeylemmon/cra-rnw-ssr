@@ -1,23 +1,28 @@
 import { useState } from 'react'
+import { Text, TouchableOpacity } from 'react-native-web'
 
 function App() {
 	const [isOn, setIsOn] = useState(false)
 	return (
-		<div
-			onClick={() => setIsOn(!isOn)}
+		<TouchableOpacity
+			onPress={() => setIsOn(!isOn)}
 			style={{
-				padding: '4rem',
-				margin: '4rem',
+				padding: 30,
+				margin: 30,
 				backgroundColor: isOn ? 'green' : 'gray',
-				color: 'white',
-				fontSize: '24pt',
-				textAlign: 'center',
-				cursor: 'pointer',
-				borderRadius: '2rem',
+				borderRadius: 30,
 			}}
 		>
-			{isOn ? 'clicked' : 'click me'}
-		</div>
+			<Text
+				style={{
+					color: 'white',
+					fontSize: 50,
+					textAlign: 'center',
+				}}
+			>
+				{isOn ? 'clicked' : 'click me'}
+			</Text>
+		</TouchableOpacity>
 	)
 }
 
