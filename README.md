@@ -1,3 +1,29 @@
+# create-react-app + SSR + react-native-web
+
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/mikeylemmon/cra-rnw-ssr/blob/main/src/index.tsx)
+
+This repo is part of
+[an investigation](https://github.com/remix-run/remix/discussions/1578#discussioncomment-3777340)
+into hydration errors encountered using react-native-web in Remix.
+
+Starting from a create-react-app typescript template, the app was modified to
+use React to render the entire document instead of just a #root div. Then, an
+[express SSR server](./server) was added, roughly based on
+[this blog post](https://medium.com/bucharestjs/upgrading-a-create-react-app-project-to-a-ssr-code-splitting-setup-9da57df2040a)
+by Andrei Duca. Finally, react-native-web was integrated with stylesheet
+injection by following
+[tyrauber's approach](https://github.com/tyrauber/remix-expo/tree/main/apps/remix/app).
+
+The hydration errors encountered when integrating RNW with Remix are not
+arising here. It is interesting to note, however, that when hydration is
+bypassed by using `createRoot` instead of `hydrateRoot` on the client, the
+server/client css discrepancies observed in
+https://github.com/mikeylemmon/remix-rnw/tree/horus-styles are visible
+(though without the hydration error of course, as createRoot makes no
+attempt at hydration).
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

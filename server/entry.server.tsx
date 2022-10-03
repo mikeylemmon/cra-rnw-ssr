@@ -32,5 +32,5 @@ router.use(express.static(path.resolve(__dirname, '..', 'build'), { maxAge: '3s'
 
 app.use(router)
 app.listen(PORT, () => {
-	console.log('listening on ' + PORT + '...')
+	console.log('SSR server is listening on port ' + PORT + '...')
 })

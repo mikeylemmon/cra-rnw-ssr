@@ -1,0 +1,6 @@
+{
+	"hardReloadOnChange": true,
+	"startScript": "serve",
+	"template": "node",
+	"port": 3001
+}

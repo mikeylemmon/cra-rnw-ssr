@@ -9,7 +9,7 @@ function App() {
 			style={{
 				padding: 30,
 				margin: 30,
-				backgroundColor: isOn ? 'green' : 'gray',
+				backgroundColor: isOn ? '#096' : '#06a',
 				borderRadius: 30,
 			}}
 		>
